@@ -12,7 +12,7 @@ export default function Index() {
       }}
     >
       <Text style={{ fontSize: 24, fontWeight: "bold" }}>hello, you.</Text>
-	  <Button onPressIn={() => { console.log('Button pressed')}}>click me if you dare</Button>
+	  <Button onPressIn={() => { console.log('Button pressed') }}>click me if you dare</Button>
     </View>
   );
 }
