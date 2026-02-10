@@ -1,5 +1,4 @@
-import { Button } from "@react-navigation/elements";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 export default function Index() {
   return (
@@ -12,7 +11,19 @@ export default function Index() {
       }}
     >
       <Text style={{ fontSize: 24, fontWeight: "bold" }}>hello, you.</Text>
-	  <Button onPressIn={() => { console.log('Button pressed') }}>click me if you dare</Button>
+      <Pressable
+        onPress={() => {
+          console.log("Button pressed");
+        }}
+        style={{
+          paddingVertical: 10,
+          paddingHorizontal: 14,
+          borderRadius: 8,
+          backgroundColor: "#ddd",
+        }}
+      >
+        <Text>click me if you dare</Text>
+      </Pressable>
     </View>
   );
 }

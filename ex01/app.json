@@ -3,7 +3,7 @@
     "name": "ex01",
     "slug": "ex01",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "ex01",
     "userInterfaceStyle": "automatic",
