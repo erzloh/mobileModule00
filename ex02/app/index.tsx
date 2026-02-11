@@ -17,7 +17,7 @@ export default function Index() {
         <View style={{ flex: 1, justifyContent: "center" }}>
           <CalcDisplay calcText="0" calcResult="0" />
         </View>
-        <View style={{ flex: 2 }}>
+        <View style={{ flex: 2, justifyContent: "flex-end" }}>
           <Buttons />
         </View>
       </View>

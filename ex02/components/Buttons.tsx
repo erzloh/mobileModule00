@@ -10,12 +10,25 @@ const keys = [
 ];
 
 export default function Buttons() {
+const [gridWidth, setGridWidth] = useState(0);
+const rows = keys.length;
+const cols = keys[0]?.length ?? 1;
+const cellMax = gridWidth / cols;
+
   return (
     <View
-      style={{ flex: 1, flexDirection: "row", flexWrap: "wrap" }}
+      style={{
+        flex: 1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignContent: "flex-end",
+      }}
+      onLayout={(e) => {
+        setGridWidth(e.nativeEvent.layout.width);
+      }}
     >
       {keys.flat().map((k, i) => (
-        <View key={i} style={{ width: "20%", height: "25%", padding: 3 }}>
+        <View key={i} style={{ width: `${100 / cols}%`, height: `${100 / rows}%`, padding: 3, maxHeight: cellMax }}>
           {k ? (
             <Pressable
               onPress={() => {
@@ -26,7 +39,7 @@ export default function Buttons() {
                 width: "100%",
                 height: "100%",
                 borderRadius: 999,
-                backgroundColor: "#ddd",
+                backgroundColor: k === "=" ? "#bbb" : "#ddd",
                 justifyContent: "center",
                 alignItems: "center",
               }}
