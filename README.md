@@ -13,8 +13,11 @@ Each exercise folder is a standalone Expo project.
 
 ## Screenshot
 
-![Calculator App Screenshot](images/calculator_app_screenshot.png)
-A screenshot of the last exercise, the calculator app.
+<figure>
+  <img src="images/calculator_app_screenshot.png" alt="Calculator App Screenshot" width="200" />
+  <figcaption>A screenshot of the last exercise, the calculator app.</figcaption>
+</figure>
+
 
 ## Prerequisites
 
