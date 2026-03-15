@@ -11,6 +11,11 @@ This repository contains the **Mobile Module 00** project from the **Advanced Cu
 
 Each exercise folder is a standalone Expo project.
 
+## Screenshot
+
+![Calculator App Screenshot](images/calculator_app_screenshot.png)
+A screenshot of the last exercise, the calculator app.
+
 ## Prerequisites
 
 - Node.js (LTS recommended)

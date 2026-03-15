@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CalcDisplay from "../components/CalcDisplay";
 import Buttons from "@/components/Buttons";
 import { useState } from "react"
-import { evaluate, re } from "mathjs";
+import { evaluate } from "mathjs";
 
 export type CalculatorKey =
   | "0" | "1" | "2" | "3" | "4"
@@ -74,7 +74,7 @@ export default function Index() {
 		
 			try {
 				setCalcResult(String(evaluate(calcExpression)));
-			} catch (error) {
+			} catch {
 				setCalcResult("Error");
 			}
 			return;

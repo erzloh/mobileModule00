@@ -6,10 +6,13 @@ type CalcDisplayProps = {
 };
 
 export default function CalcDisplay({ calcExpression, calcResult }: CalcDisplayProps) {
+  const expressionText = calcExpression.length > 0 ? calcExpression : "0";
+  const resultText = calcResult && calcResult.length > 0 ? calcResult : "0";
+
   return (
     <View style={{ alignItems: "flex-end", gap: 16 }}>
-      <Text style={{ fontSize: 36, fontWeight: "bold" }}>{calcExpression}</Text>
-      {calcResult ? <Text style={{ fontSize: 24 }}>{calcResult}</Text> : null}
+      <Text style={{ fontSize: 36, fontWeight: "bold" }}>{expressionText}</Text>
+      <Text style={{ fontSize: 24 }}>{resultText}</Text>
     </View>
   );
 }
